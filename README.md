@@ -50,6 +50,7 @@ autorefresh=1
 type=rpm-md
 ```
 ```bash
+sudo systemctl daemon-reexec
 sudo yum install elasticsearch -y
 sudo systemctl enable elasticsearch
 sudo systemctl start elasticsearch
