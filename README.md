@@ -35,6 +35,20 @@ This project implements a **Centralized Logging System** using the ELK Stack (El
 
 ###  Install Elasticsearch
 
+```
+sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+sudo nano /etc/yum.repos.d/elastic.repo
+```
+```
+[elastic-8.x]
+name=Elastic repository for 8.x packages
+baseurl=https://artifacts.elastic.co/packages/8.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+```
 ```bash
 sudo yum install elasticsearch -y
 sudo systemctl enable elasticsearch
