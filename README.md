@@ -143,6 +143,15 @@ echo "ELK TEST LOG" >> /var/log/test.log
 curl localhost:9200/_cat/indices?v
 ```
 
+# Token
+```
+sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
+# set password
+```
+sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+```
+
 ### Kibana Setup: 
 1. Open Kibana
 2. Go to Stack Management → Index Patterns
